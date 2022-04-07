@@ -1,14 +1,17 @@
 " mapleader
 let mapleader=" "
 
+" new terminal
+map <S-t> :vert :term<CR>
+
 " testing
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>T :TestFile<CR>
 nnoremap <Leader>TT :TestSuite<CR>
 
 " split resize
-nnoremap <Leader> 10<C-w>>
-nnoremap <Leader> 10<C-w><
+nnoremap <Leader>> 10<C-w>>
+nnoremap <Leader>< 10<C-w><
 
 " quick semi
 nnoremap <Leader>; $a<Esc>
@@ -63,6 +66,9 @@ nmap <Leader>s <Plug>(easymotion-s2)
 
 let NERDTreeQuitOnOpen=1
 
+" Auto change the directory to the current file I'm working on
+" autocmd BufEnter * lcd %:p:h
+
 " git
 nnoremap <Leager>G :G<cr>
 nnoremap <Leager>gp :Gpush<cr>
@@ -82,7 +88,7 @@ endif
 
 set splitright
 function! OpenTermina()
-" move to right most buffer
+  " move to right most buffer
 execute "normal \<C-l>"
 execute "normal \<C-l>"
 execute "normal \<C-l>"
@@ -96,9 +102,9 @@ let bufType == "terminal"
 execute "q"
 else
  "open terminal
-execute "vsp term://terminal"
+execute "vsp term://term"
 
-"turn off numbers
+  "turn off numbers
 execute "set nonu"
 execute "set nornu"
 
@@ -115,10 +121,7 @@ startinsert!
 endif
 endfunction
 
-" fix error to: fiail to find executable tmux
+  " fix error to: fiail to find executable tmux
 if !executable('tmux')
   let g:loaded_vimux = 1
 endif
- 
-
-

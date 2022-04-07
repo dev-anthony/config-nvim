@@ -16,7 +16,7 @@ Plug 'yggdroot/indentline'
 
 " Nerdtree
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdcommenter'
 
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -41,7 +41,8 @@ Plug 'christoomey/vim-tmux-navigator'
 " autocomplete
 Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch':'relase'}
-" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': npm install --frozen-lockfile'}
+
 " test
 Plug 'tyewang/vimux-jest-test'
 Plug 'janko-m/vim-test'
